@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>Ordrid.Cats.Main</PackageId>
+    <PackageVersion>0.0.0-alpha</PackageVersion>
+    <Authors>Michael B. Espeña</Authors>
+    <Description>This package provides simple utility classes and functions to facilitate very basic functional programming.</Description>
+    <Copyright>Michael B. Espeña $([System.DateTime]::UtcNow.Year)</Copyright>
+    <RepositoryUrl>https://github.com/ordrid/cats</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
