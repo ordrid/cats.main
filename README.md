@@ -8,7 +8,7 @@ This package provides utility classes and functions to facilitate basic function
 
 ```cs
 global using Cats.Main.Core;
-global using Cats.Main.Common;
+global using Cats.Main.Utils;
 ```
 
 ## TODO
