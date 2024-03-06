@@ -10,12 +10,12 @@ namespace Cats.Main.Core;
 public abstract record Option<T>
 {
     /// <summary>
-    /// Gets a value indicating whether the optional value is of the <see cref="Some"/> variant.
+    /// Gets a value indicating whether the optional value is of the <see cref="Some{T}"/> variant.
     /// </summary>
     public abstract bool IsSome { get; }
 
     /// <summary>
-    /// Gets a value indicating whether the optional value is of the <see cref="None"/> variant.
+    /// Gets a value indicating whether the optional value is of the <see cref="None{T}"/> variant.
     /// </summary>
     public bool IsNone => !IsSome;
 }
@@ -29,7 +29,7 @@ public sealed record Some<T> : Option<T>
     private Some(T value) => Value = value;
 
     /// <summary>
-    /// Gets the encapsulated value of the <see cref="Some"/> type.
+    /// Gets the encapsulated value of the <see cref="Some{T}"/> type.
     /// </summary>
     public T Value { get; }
 
@@ -37,10 +37,10 @@ public sealed record Some<T> : Option<T>
     public override bool IsSome => true;
 
     /// <summary>
-    /// Creates a new instance of <see cref="Some"/>.
+    /// Creates a new instance of <see cref="Some{T}"/>.
     /// </summary>
     /// <param name="value">The encapsulated value.</param>
-    /// <returns>A new instance of <see cref="None"/>.</returns>
+    /// <returns>A new instance of <see cref="None{T}"/>.</returns>
     public static Some<T> New(T value) => new(value);
 }
 
@@ -55,8 +55,8 @@ public sealed record None<T> : Option<T>
     public override bool IsSome => false;
 
     /// <summary>
-    /// Returns a new instance of <see cref="None"/>.
+    /// Returns a new instance of <see cref="None{T}"/>.
     /// </summary>
-    /// <returns>An instance of <see cref="None"/>.</returns>
+    /// <returns>An instance of <see cref="None{T}"/>.</returns>
     public static None<T> New() => new();
 }
